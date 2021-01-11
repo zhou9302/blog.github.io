@@ -8,15 +8,17 @@ module.exports = {
       { text: 'Guide', link: '/guide' },
       { text: 'External', link: '/external' }
     ],
-    sidebar: {
-      '/': [
+    sidebar: [
         {
-          title: 'Group 1',   // 必要的
-          path: '/foo/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-          collapsable: false, // 可选的, 默认值是 true,
-          sidebarDepth: 1,    // 可选的, 默认值是 1
+          title: 'seo',   // 必要的
+          path: '/seo/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+          sidebarDepth: 3,
           children: [
-            '/'
+             {
+                title: '基于SEO的前端渲染方案选型',   // 必要的
+                path: '/seo/plan',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+                sidebarDepth: 3
+              },
           ]
         },
         {
@@ -25,7 +27,5 @@ module.exports = {
           initialOpenGroupIndex: -1 // 可选的, 默认值是 0
         }
       ]
-    },
-    sidebarDepth: 2
   }
 }
